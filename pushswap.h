@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 15:22:43 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/01/15 18:12:44 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/01/15 19:01:02 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,7 @@ t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **alst, t_list *nw);
 void	ft_lstdelone(t_list *lst, void (*del)(int));
 void	ft_lstclear(t_list **lst, void (*del)(int));
+void swap_a(t_list **l_a);
+void swap_b(t_list **l_b);
+void swap_s(t_list **l_a, t_list **l_b);
 #endif

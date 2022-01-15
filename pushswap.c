@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 17:53:14 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/01/15 18:16:54 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/01/15 18:57:16 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,6 @@ int    ft_atoi(const char *str)
     return (result * sign);
 }
 
-void swap_a(t_list **l_a)
-{
-	  t_list	*tmp;
-
-  tmp = *l_a;
-  tmp = tmp->next;
-  (*l_a)->next = tmp->next;
-  tmp->next = *l_a;
-  *l_a = tmp;
-}
 int main (int ac, char **av)
 {
     int i;
