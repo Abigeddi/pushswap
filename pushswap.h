@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 15:22:43 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/02/17 00:30:39 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/02/19 02:44:49 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,11 @@ typedef struct stack
 }  s_stacks;
 
 void		ft_swap(int *left, int *right);
-void		ft_arrange_rest(s_stacks *stacks);
-void		ft_arrange_more_then_handred(s_stacks *stacks);
+void		ft_sort_rest(s_stacks *stacks);
+void		ft_sort_more_then_handred(s_stacks *stacks);
 void		ft_find_smallest_number_ten(s_stacks *stacks);
-void		ft_arrange_ten_numbers(s_stacks *stacks);
-void		ft_arrange_three_numbers(s_tab *stack_a);
+void		ft_sort_ten_numbers(s_stacks *stacks);
+void		ft_sort_three_numbers(s_tab *stack_a);
 
 int			ft_get_biggest_index(s_tab *stack_b);
 
