@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 15:22:43 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/02/19 02:44:49 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/02/19 21:51:35 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void		ft_sort_more_then_handred(s_stacks *stacks);
 void		ft_find_smallest_number_ten(s_stacks *stacks);
 void		ft_sort_ten_numbers(s_stacks *stacks);
 void		ft_sort_three_numbers(s_tab *stack_a);
+void        ft_sort_five_numbers(s_stacks *stacks);
 
 int			ft_get_biggest_index(s_tab *stack_b);
 

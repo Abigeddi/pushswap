@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 03:50:01 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/02/19 05:38:37 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:01:30 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int ft_get_smallest_index(s_tab *stack_a)
 	
 	 i = 0;
 	 index = i;
-	 while (i < stack_a.used_size)
+	 while (i < stack_a->used_size)
 	 {
 		if (stack_a->tab[index] > stack_a->tab[i])
 		 	index = i;
@@ -42,8 +42,8 @@ void ft_find_smallest_number(s_stacks *stacks)
 		else
 		{
 			ft_rra(&stacks->stack_a, ON);
+		}	
 			index = ft_get_smallest_index(&stacks->stack_a);
-		}
 	}	
 }
 
@@ -67,7 +67,7 @@ void ft_sort_five_numbers(s_stacks *stacks)
 			 i++;
 		 }
 		 ft_sort_three_numbers(&stacks->stack_a);
-		 while (i > 0);
+		 while (i > 0)
 		 {
 			 ft_pa(stacks, ON);
 			 i--;
