@@ -6,13 +6,13 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 21:49:08 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/02/16 21:49:50 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/02/23 23:28:35 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-int	ft_check_number(char *number) // check if the given char is a number at a given point 
+int	ft_check_number(char *number)
 {
 	int	i;
 
@@ -28,7 +28,7 @@ int	ft_check_number(char *number) // check if the given char is a number at a gi
 	return (1);
 }
 
-int	ft_check_duplicates(s_stacks *stacks, int number)  // checks for duplicate numbers 
+int	ft_check_duplicates(s_stacks *stacks, int number)
 {
 	int	size;
 	int	i;
@@ -48,7 +48,7 @@ int	ft_check_duplicates(s_stacks *stacks, int number)  // checks for duplicate n
 	return (1);
 }
 
-int	ft_check_sorted(s_tab *tab) // check if the stack is sorted
+int	ft_check_sorted(s_tab *tab)
 {
 	int	i;
 	int	*tmp;
@@ -64,7 +64,7 @@ int	ft_check_sorted(s_tab *tab) // check if the stack is sorted
 	return (1);
 }
 
-int	ft_count_numbers(char *string) // counts numbers :^)
+int	ft_count_numbers(char *string)
 {
 	int	i;
 	int	count;
@@ -80,7 +80,7 @@ int	ft_count_numbers(char *string) // counts numbers :^)
 	return (count);
 }
 
-int	ft_err_and_free(s_stacks *stacks, char *message, int ret) //prints out ERROR meg and frees the stack's
+int	ft_err_and_free(s_stacks *stacks, char *message, int ret)
 {
 	if (stacks)
 	{

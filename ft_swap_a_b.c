@@ -6,13 +6,13 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 17:58:18 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/02/16 19:21:33 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/02/23 23:01:55 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-void ft_sa_or_sb(s_tab *tab, int type, char stack)
+void	ft_sa_or_sb(s_tab *tab, int type, char stack)
 {
 	int tmp;
 		
@@ -28,7 +28,7 @@ void ft_sa_or_sb(s_tab *tab, int type, char stack)
 	}
 }
 
-void ft_sa_and_sb(s_stacks *stacks, int type)
+void	 ft_sa_and_sb(s_stacks *stacks, int type)
 {
     if (type)
 		write (1,"ss\n",3);

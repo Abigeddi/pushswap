@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 18:17:06 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/02/19 21:58:36 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/02/25 06:34:47 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,13 @@ int	main(int ac, char *av[])
 			ft_sort_three_numbers(&stacks.stack_a);
 		else if (stacks.stack_a.size == 4 || stacks.stack_a.size == 5)
 			ft_sort_five_numbers(&stacks);
-		ft_err_and_free(&stacks, NULL, 0);
+		else if (stacks.stack_a.size > 5 && stacks.stack_a.size <= 10)
+			ft_sort_then_numbers (&stacks);
+		else if (stacks.stack_a.size > 10 && stacks.stack_a.size <= 100)
+			ft_sort_one_handred(&stacks);
+		else if (stacks.stack_a.size > 100)
+			ft_sort_five_handred(&stacks);
+		return (ft_err_and_free(&stacks, NULL, 0));
 	}
 	return (0);
 }

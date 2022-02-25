@@ -6,14 +6,14 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 19:14:26 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/02/16 19:16:23 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/02/23 23:06:57 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
 
-void ft_clear_first_elm(int *tab, int used_size ) // clears space on top of the stack
+void ft_clear_first_elm(int *tab, int used_size) // clears space on top of the stack
 {
 	while (used_size > 0)
 	{
