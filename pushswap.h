@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 15:22:43 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/02/24 23:53:57 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/02/25 22:25:38 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct stack
     s_tab stack_a;
     s_tab stack_b;
 }  s_stacks;
+
 int	ft_strcmp(char *s1, char *s2);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t ds);

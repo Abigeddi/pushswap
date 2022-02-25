@@ -1,56 +1,54 @@
-PUSH_SWAP_SRC = ft_check_error.c \
-				ft_find_biggest_nb.c \
-				ft_sort_five_nb.c \
-				ft_sort_handred.c \
-				ft_pa_pb.c \
-				ft_reverse_rotate.c \
-				ft_rotate.c \
-				ft_swap_a_b.c \
-				ft_sort_list.c \
-				ft_sort_then_nb.c \
-				ft_sort_three_numbers.c \
-				ft_push_swap.c \
-				main.c \
-				ft_split.c \
-				ft_push_utils.c \
+NAME = pushswap
+BONUS = checker
+INCLUDE = pushswap.h
+OBJ = 		ft_check_error.o \
+				ft_find_biggest_nb.o \
+				ft_sort_five_numbers.o \
+				ft_sort_handred.o \
+				ft_pa_pb.o \
+				ft_reverse_rotate.o \
+				ft_rotate.o \
+				ft_swap_a_b.o \
+				ft_sort_list.o \
+				ft_sort_then_numbers.o \
+				ft_sort_three_numbers.o \
+				ft_push_swap.o \
+				main.o \
+				ft_split.o \
+				ft_push_utils.o \
 
+OBJ_BONUS = checker.o \
+			get_next_line.o \
+			ft_split.o \
+			ft_check_error.o \
+			ft_swap_a_b.o \
+			ft_reverse_rotate.o \
+			ft_rotate.o \
+			ft_pa_pb.o \
+			ft_push_swap.o \
+			ft_push_utils.o \
+		
+CFLAGS = -Wall -Werror -Wextra
+all: $(NAME)
+	cc $(CFLAGS) $(OBJ) -o $(NAME)
+$(NAME): $(OBJ)
 
-CHECKER_SRC = 	checker.c \
-				get_next_line.c \
-				ft_split.c \
-				ft_check_errors.c \
-				ft_push_a_b.c \
-				ft_reverse_rotate.c \
-				ft_rotate.c \
-				ft_pa_pb.c \
-				ft_push_swap.c \
-				ft_push_utils.c \
+bonus: $(BONUS)
+	cc $(CFLAGS) $(OBJ_BONUS) -o $(BONUS)
 
-				
+$(BONUS): $(OBJ_BONUS)
+	
 
+bonus/%.o : %.c pushswap.h
+	cc $(CFLAGS) -c $< -o $@
 
-PUSH_SWAP_OBJ = $(PUSH_SWAP_SRC:%.c=%.o)
-CHECKER_OBJ = $(CHECKER_SRC:%.c=%.o)
-PUSH_SWAP = pushswap
-CHECKER = checker.c
-CC = cc
-CFLAGS = -Wall -Wextra -Werror
+%.o : %.c pushswap.h
+	cc $(CFLAGS) -c $< -I $(INCLUDE) -o $@
 
-all : $(PUSH_SWAP) $(CHECKER)
+clean:
+	rm -f $(OBJ) $(OBJ_BONUS)
+fclean: clean
+	rm -f $(NAME) $(BONUS)
 
-$(PUSH_SWAP) : $(PUSH_SWAP_OBJ)
-	$(CC) $(CFLAGS) $(PUSH_SWAP_OBJ) -o $(PUSH_SWAP)
-
-$(CHECKER) : $(CHECKER_OBJ)
-	$(CC) $(CFLAGS) $(CHECKER_OBJ) -o $(CHECKER)
-
-%.o:%.c
-	$(CC) $(CFLAGS) -c $^
-
-clean :
-	rm -rf *.o
-
-fclean : clean
-	rm -rf $(CHECKER) $(PUSH_SWAP)
-
-re : fclean all
+re: fclean all
+.PHONY: all clean fclean re
