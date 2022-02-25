@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 18:53:30 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/02/16 18:54:45 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/02/25 23:00:21 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,6 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (result * sign);
-}
-
-int	ft_isdigit(int c)
-{
-	if (c >= 48 && c <= 57)
-		return (1);
-	else
-		return (0);
 }
 
 size_t	ft_strlen(const char *str)
@@ -90,6 +82,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t ds)
 		i++;
 	return (i);
 }
+
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
@@ -102,7 +95,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	src_len = ft_strlen(src);
 	if (!dst && src && dstsize == 0)
 		return (src_len);
-	dst_len = ft_strlen(dst);	
+	dst_len = ft_strlen(dst);
 	if (dstsize <= dst_len)
 		return (dstsize + src_len);
 	while (dst[n] != 0)
@@ -116,22 +109,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[n] = '\0';
 	return (dst_len + src_len);
 }
-char	*ft_strjoin(char const *s1, char const *s2)
-{
-	size_t	len;
-	char	*s3;
-
-	if (!s1)
-		return ((char *)s2);
-	len = ft_strlen(s1) + ft_strlen(s2) + 1;
-	s3 = (char *)malloc(sizeof(char) * len);
-	if (s3 == 0)
-		return (0);
-	ft_strlcpy(s3, s1, ft_strlen(s1) + 1);
-	ft_strlcat(s3, s2, len);
-	return (s3);
-}
-
-
-
-

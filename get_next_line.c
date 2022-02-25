@@ -6,11 +6,27 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 17:55:32 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/02/16 17:56:30 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/02/25 23:20:04 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	size_t	len;
+	char	*s3;
+
+	if (!s1)
+		return ((char *)s2);
+	len = ft_strlen(s1) + ft_strlen(s2) + 1;
+	s3 = (char *)malloc(sizeof(char) * len);
+	if (s3 == 0)
+		return (0);
+	ft_strlcpy(s3, s1, ft_strlen(s1) + 1);
+	ft_strlcat(s3, s2, len);
+	return (s3);
+}
 
 char	*ft_strdup(char *str)
 {

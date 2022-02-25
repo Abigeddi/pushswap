@@ -6,13 +6,13 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 06:45:15 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/02/25 22:12:46 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/02/25 23:40:58 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-void	ft_read_from_ps(char *line, s_stacks *stacks)
+void	ft_read_from_ps(char *line, t_stacks *stacks)
 {
 	if (!ft_strcmp(line, "sa\n"))
 		ft_sa_or_sb(&stacks->stack_a, OFF, 'a');
@@ -43,7 +43,7 @@ void	ft_read_from_ps(char *line, s_stacks *stacks)
 int	main(int ac, char **av)
 {
 	char		*line;
-	s_stacks	stacks;
+	t_stacks	stacks;
 	char		*string;
 
 	ac--;

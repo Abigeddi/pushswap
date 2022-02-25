@@ -6,14 +6,13 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 19:14:26 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/02/23 23:06:57 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/02/25 23:41:10 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-
-void ft_clear_first_elm(int *tab, int used_size) // clears space on top of the stack
+void	ft_clear_first_elm(int *tab, int used_size)
 {
 	while (used_size > 0)
 	{
@@ -22,7 +21,7 @@ void ft_clear_first_elm(int *tab, int used_size) // clears space on top of the s
 	}
 }
 
-void	ft_remove_first_elm(int *tab, int used_size) //delete the first number in the stack
+void	ft_remove_first_elm(int *tab, int used_size)
 {
 	int	i;
 
@@ -34,7 +33,7 @@ void	ft_remove_first_elm(int *tab, int used_size) //delete the first number in t
 	}
 }
 
-void	ft_pa(s_stacks *stacks, int type)
+void	ft_pa(t_stacks *stacks, int type)
 {
 	int	size_of_b;
 	int	size_of_a;
@@ -59,7 +58,7 @@ void	ft_pa(s_stacks *stacks, int type)
 	stacks->stack_b.used_size--;
 }
 
-void	ft_pb(s_stacks *stacks, int type)
+void	ft_pb(t_stacks *stacks, int type)
 {
 	int	size_of_b;
 	int	size_of_a;

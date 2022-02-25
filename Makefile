@@ -1,4 +1,4 @@
-NAME = pushswap
+NAME = push_swap
 BONUS = checker
 INCLUDE = pushswap.h
 OBJ = 		ft_check_error.o \
@@ -13,20 +13,27 @@ OBJ = 		ft_check_error.o \
 				ft_sort_then_numbers.o \
 				ft_sort_three_numbers.o \
 				ft_push_swap.o \
-				main.o \
 				ft_split.o \
 				ft_push_utils.o \
+				get_next_line.o \
+				ft_push_swap1.o
 
 OBJ_BONUS = checker.o \
-			get_next_line.o \
 			ft_split.o \
 			ft_check_error.o \
-			ft_swap_a_b.o \
+			ft_find_biggest_nb.o \
+			ft_sort_five_numbers.o \
+			ft_sort_handred.o \
+			ft_pa_pb.o \
 			ft_reverse_rotate.o \
 			ft_rotate.o \
-			ft_pa_pb.o \
-			ft_push_swap.o \
+			ft_swap_a_b.o \
+			ft_sort_list.o \
+			ft_sort_then_numbers.o \
+			ft_sort_three_numbers.o \
+			ft_push_swap1.o \
 			ft_push_utils.o \
+			get_next_line.o
 		
 CFLAGS = -Wall -Werror -Wextra
 all: $(NAME)

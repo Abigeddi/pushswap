@@ -6,13 +6,13 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 21:45:55 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/02/23 21:54:33 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/02/25 23:41:36 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-void	ft_swap(int *left, int *right) // swap the first nb with the 2nd one
+void	ft_swap(int *left, int *right)
 {
 	int	tmp;
 
@@ -21,7 +21,7 @@ void	ft_swap(int *left, int *right) // swap the first nb with the 2nd one
 	*right = tmp;
 }
 
-int	*ft_save_list(s_tab *stack_a) // store all the numbers from stack a to a new tab 
+int	*ft_save_list(t_tab *stack_a)
 {
 	int	i;
 	int	*stored_list;
@@ -36,7 +36,7 @@ int	*ft_save_list(s_tab *stack_a) // store all the numbers from stack a to a new
 	return (stored_list);
 }
 
-int	*ft_sort_tab(s_tab *stack_a) // sort the numbers in the new stack (bubble sort)
+int	*ft_sort_tab(t_tab *stack_a)
 {
 	int	i;
 	int	j;
@@ -61,7 +61,7 @@ int	*ft_sort_tab(s_tab *stack_a) // sort the numbers in the new stack (bubble so
 	return (sorted_list);
 }
 
-void	ft_sort_rest(s_stacks *stacks)
+void	ft_sort_rest(t_stacks *stacks)
 {
 	if (stacks->stack_a.used_size == 2)
 	{
@@ -76,7 +76,7 @@ void	ft_sort_rest(s_stacks *stacks)
 		ft_sort_rest_of_numbers(stacks, stacks->stack_a.used_size);
 }
 
-void 	ft_sort_more_then_handred(s_stacks *stacks)
+void	ft_sort_more_then_handred(t_stacks *stacks)
 {
 	if (stacks->stack_a.used_size == 2)
 	{

@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 18:17:06 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/02/25 06:34:47 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/02/25 23:42:07 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(int ac, char *av[])
 {
-	s_stacks	stacks;
+	t_stacks	stacks;
 	char		*str;
 
 	ac--;

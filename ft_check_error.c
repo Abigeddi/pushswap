@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check-error.c                                   :+:      :+:    :+:   */
+/*   ft_check_error.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 21:49:08 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/02/23 23:28:35 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/02/25 23:41:03 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_check_number(char *number)
 	return (1);
 }
 
-int	ft_check_duplicates(s_stacks *stacks, int number)
+int	ft_check_duplicates(t_stacks *stacks, int number)
 {
 	int	size;
 	int	i;
@@ -48,7 +48,7 @@ int	ft_check_duplicates(s_stacks *stacks, int number)
 	return (1);
 }
 
-int	ft_check_sorted(s_tab *tab)
+int	ft_check_sorted(t_tab *tab)
 {
 	int	i;
 	int	*tmp;
@@ -80,7 +80,7 @@ int	ft_count_numbers(char *string)
 	return (count);
 }
 
-int	ft_err_and_free(s_stacks *stacks, char *message, int ret)
+int	ft_err_and_free(t_stacks *stacks, char *message, int ret)
 {
 	if (stacks)
 	{

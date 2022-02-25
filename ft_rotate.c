@@ -6,13 +6,13 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 21:46:36 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/02/16 21:47:17 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/02/25 23:41:24 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-void	ft_ra(s_tab *stack_a, int type)
+void	ft_ra(t_tab *stack_a, int type)
 {
 	int	first_elm;
 
@@ -23,7 +23,7 @@ void	ft_ra(s_tab *stack_a, int type)
 	stack_a->tab[stack_a->used_size - 1] = first_elm;
 }
 
-void	ft_rb(s_tab *stack_b, int type)
+void	ft_rb(t_tab *stack_b, int type)
 {
 	int	first_elm;
 
@@ -34,7 +34,7 @@ void	ft_rb(s_tab *stack_b, int type)
 	stack_b->tab[stack_b->used_size - 1] = first_elm;
 }
 
-void	ft_ra_and_rb(s_stacks *stacks, int type)
+void	ft_ra_and_rb(t_stacks *stacks, int type)
 {
 	if (type)
 		write(1, "rr\n", 3);

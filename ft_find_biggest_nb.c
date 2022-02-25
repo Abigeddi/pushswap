@@ -6,13 +6,21 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 21:36:59 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/02/23 23:46:26 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/02/25 23:52:24 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-void	ft_sort_rest_of_numbers(s_stacks *stacks, int size)
+int	ft_isdigit(int c)
+{
+	if (c >= 48 && c <= 57)
+		return (1);
+	else
+		return (0);
+}
+
+void	ft_sort_rest_of_numbers(t_stacks *stacks, int size)
 {
 	if (!ft_check_sorted(&stacks->stack_a))
 	{
@@ -35,7 +43,7 @@ int	ft_find_key_number(int *sorted_list, int size, int divided, int chunks)
 	return (key_munber);
 }
 
-int	ft_get_biggest_index(s_tab *stack_b)
+int	ft_get_biggest_index(t_tab *stack_b)
 {
 	int	i;
 	int	b_index;
@@ -51,7 +59,7 @@ int	ft_get_biggest_index(s_tab *stack_b)
 	return (b_index);
 }
 
-void	ft_find_biggest_number(s_stacks *stacks)
+void	ft_find_biggest_number(t_stacks *stacks)
 {
 	int	b_index;
 

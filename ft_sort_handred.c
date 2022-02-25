@@ -6,13 +6,13 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 03:53:55 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/02/24 23:53:01 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/02/25 23:41:32 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-int	ft_search_index(s_stacks *stacks, int key_number)
+int	ft_search_index(t_stacks *stacks, int key_number)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int	ft_search_index(s_stacks *stacks, int key_number)
 	return (-1);
 }
 
-void	ft_move_to_top(s_stacks *stacks, int index)
+void	ft_move_to_top(t_stacks *stacks, int index)
 {
 	int	divid;
 
@@ -48,7 +48,7 @@ void	ft_move_to_top(s_stacks *stacks, int index)
 	}
 }
 
-void	ft_push_index(s_stacks *stacks, int key_number)
+void	ft_push_index(t_stacks *stacks, int key_number)
 {
 	int	index;
 
@@ -61,11 +61,11 @@ void	ft_push_index(s_stacks *stacks, int key_number)
 	}
 }
 
-void	ft_sort_one_handred(s_stacks *stacks)
+void	ft_sort_one_handred(t_stacks *stacks)
 {
 	unsigned int	i ;
-	int	key_number;
-	int	*sorted_list;
+	int				key_number;
+	int				*sorted_list;
 
 	i = 1;
 	sorted_list = ft_sort_tab(&stacks->stack_a);
@@ -85,7 +85,7 @@ void	ft_sort_one_handred(s_stacks *stacks)
 	}
 }
 
-void	ft_sort_five_handred(s_stacks *stacks)
+void	ft_sort_five_handred(t_stacks *stacks)
 {
 	int	i;
 	int	key_number;
